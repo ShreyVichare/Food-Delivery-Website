@@ -15,6 +15,7 @@ export default {
       },
       fontFamily: {
         Outfit: ["Outfit", "sans-serif"],
+        Cur: ["Playwrite DE Grund", " cursive"],
       },
     },
   },
