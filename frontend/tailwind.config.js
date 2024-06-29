@@ -5,6 +5,7 @@ export default {
     extend: {
       animation: {
         fade: "fadeIn 2.5s ease-in-out",
+        fade1s: "fadeIn 1s ease-in-out",
       },
 
       keyframes: {
@@ -17,6 +18,9 @@ export default {
         Outfit: ["Outfit", "sans-serif"],
         Cur: ["Playwrite DE Grund", " cursive"],
         Pop: ["Poppins", " sans-serif"],
+      },
+      gridTemplateColumns: {
+        "fill-240": "repeat(auto-fill, minmax(240px, 1fr))",
       },
     },
   },
