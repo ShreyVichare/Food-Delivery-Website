@@ -3,7 +3,10 @@ import { assets } from "../../assets/assets";
 
 const AppDownload = () => {
   return (
-    <div className="mt-16 flex flex-col items-center justify-center text-center">
+    <div
+      className="mt-16 flex flex-col items-center justify-center text-center"
+      id="app-download"
+    >
       <p className="font-semibold text-4xl">
         For Better Experience Download <br />
         Tomato App

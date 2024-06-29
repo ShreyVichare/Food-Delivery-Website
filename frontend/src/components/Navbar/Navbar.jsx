@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { assets } from "../../assets/assets";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [menu, setMenu] = useState("home");
@@ -10,21 +11,31 @@ const Navbar = () => {
     <div className="flex justify-around mt-5" alt="navbar ">
       <img src={assets.logo} alt="logo" className="" />
 
-      <ul alt="navbar menu" className="flex font-sans gap-7 pb-0.5">
-        {menuItems.map((item) => (
-          <li
-            key={item}
-            className={`relative cursor-pointer pb-2 
-            ${menu === item ? "active" : ""}`}
-            onClick={() => setMenu(item)}
-          >
-            {item.charAt(0).toUpperCase() + item.slice(1)}
-            <span
-              className={`absolute bottom-0 left-0 h-0.5 bg-black transition-all duration-300 
-            ${menu === item ? "w-full" : "w-0"}`}
-            />
-          </li>
-        ))}
+      <ul alt="navbar menu" className="flex font-sans gap-7 pb-0.5 ">
+        <Link
+          to="/"
+          className={menu === "home" ? "active" : ""}
+          onClick={() => setMenu("home")}
+        >
+          Home
+        </Link>
+        <a
+          href="#explore-menu"
+          onClick={() => setMenu("menu")}
+          className={menu === "menu" ? "active" : ""}
+        >
+          menu
+        </a>
+        <a
+          href="#app-download"
+          onClick={() => setMenu("mobile-app")}
+          className={menu === "mobile-app" ? "active" : ""}
+        >
+          mobile-app
+        </a>
+        <a href="#footer" className={menu === "contact us" ? "active" : ""}>
+          contact us
+        </a>
       </ul>
 
       <div alt="navbar-right" className="flex gap-10">

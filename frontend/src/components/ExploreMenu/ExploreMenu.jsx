@@ -12,7 +12,7 @@ const ExploreMenu = ({ category, setCategory }) => {
   return (
     <div
       className="flex flex-col gap-[20px] ml-[9%] mt-14 mr-[9%] "
-      alt="explore menu"
+      id="explore-menu"
     >
       <h1 className="text-[#262626] font-medium text-4xl font-Cur">
         Explore our menu
